@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AD Tandoori Pizza - Live Wood-Fired Pizza</title>
+  <meta name="description" content="Authentic wood-fired tandoori pizza made with fresh dough, premium ingredients, and real fire. Order online via WhatsApp.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-accent">AD</span>
+        <span class="logo-text">TANDOORI PIZZA</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#deals">Fired Deals</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#experience">The Fire</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-trigger" id="cart-trigger" aria-label="Open Cart">
+          <i class="fa-solid fa-fire-flame-curved"></i>
+          <span class="cart-badge" id="cart-badge">0</span>
+        </button>
+        <a href="#menu" class="btn-pill-orange">Order Now</a>
+      </div>
+      
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="drawer-header">
+      <div class="nav-logo">
+        <span class="logo-accent">AD</span>
+        <span class="logo-text">TANDOORI PIZZA</span>
+      </div>
+      <button class="drawer-close" id="drawer-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#deals">Fired Deals</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#experience">The Fire</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="#menu" class="btn-pill-orange full-width">Order Now</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <!-- Interactive Canvas for Floating Embers -->
+    <canvas id="ember-canvas" class="ember-canvas"></canvas>
+    
+    <!-- Heat/Movement Texture Overlay -->
+    <div class="heat-texture-overlay"></div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="eyebrow-label">LIVE WOOD-FIRED PIZZA</span>
+        <h1 class="hero-headline">
+          Fresh dough.<br>
+          <span class="orange-highlight">Real fire. Real taste.</span>
+        </h1>
+        <p class="hero-subtext">
+          Experience the blistering heat of our traditional tandoor. Hand-stretched dough, artisan ingredients, cooked to perfection at 480°C. Delivery and takeaway available.
+        </p>
+        <div class="hero-ctas">
+          <a href="https://wa.me/923305566111?text=Hi!%20I%20would%20like%20to%20order%20some%20fresh%20Tandoori%20Pizza!" target="_blank" class="btn-solid-orange">
+            <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+          </a>
+          <a href="#menu" class="btn-outline-white">
+            View Menu <i class="fa-solid fa-arrow-down-long"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="fire-glow-ring"></div>
+        
+        <!-- Interactive Brand & Delivery Board -->
+        <div class="hero-brand-board">
+          <div class="board-header">
+            <span class="board-badge"><i class="fa-solid fa-circle-check"></i> DINE IN & TAKE AWAY</span>
+            <span class="board-badge open-status"><i class="fa-solid fa-fire"></i> NOW OPEN</span>
+          </div>
+          <div class="board-body">
+            <div class="board-logo">AD TANDOORI PIZZA</div>
+            <div class="board-divider"></div>
+            
+            <div class="board-info-grid">
+              <div class="info-item">
+                <span class="info-label">PIZZA STARTING FROM</span>
+                <span class="info-value">Rs. 429/-</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">PASTA STARTING FROM</span>
+                <span class="info-value">Rs. 349/-</span>
+              </div>
+            </div>
+            
+            <div class="board-promo-tag">
+              <span class="promo-label">CROWN CRUST M-10"</span>
+              <span class="promo-value">Rs. 1100/-</span>
+            </div>
+            
+            <div class="board-divider"></div>
+            
+            <div class="board-delivery">
+              <div class="delivery-title">FOR DELIVERY & ORDERS</div>
+              <a href="tel:03305566111" class="delivery-number">
+                <i class="fa-solid fa-phone-volume"></i> 0330-5566-111
+              </a>
+              <div class="delivery-time">
+                <i class="fa-regular fa-clock"></i> We are open: 2:00 PM to 2:00 AM
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hot Deals Section -->
+  <section class="deals-section" id="deals">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow-label">LIMITED TIME SAVINGS</span>
+        <h2 class="section-title">Fired Up Deals</h2>
+        <div class="title-divider"></div>
+      </div>
+
+      <div class="deals-grid">
+        <!-- Deal 1 -->
+        <div class="deal-card">
+          <div class="deal-badge">Deal 01</div>
+          <div class="deal-content">
+            <h3 class="deal-title">1 Small Pizza + 1 Reg. Drink</h3>
+            <p class="deal-desc">Enjoy a hot, personal wood-fired classic pizza paired with a regular cold drink.</p>
+            <div class="deal-footer">
+              <span class="deal-price">Rs. 500</span>
+              <button class="btn-add-deal" onclick="addBundleToCart('Deal 1 (1 Small Pizza + 1 Reg. Drink)', 500)">
+                Claim Deal
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deal 2 -->
+        <div class="deal-card">
+          <div class="deal-badge">Deal 02</div>
+          <div class="deal-content">
+            <h3 class="deal-title">1 Medium Classic Pizza + 2 Reg. Drinks</h3>
+            <p class="deal-desc">Perfect size for two. Medium classic pizza of choice plus two regular soft drinks.</p>
+            <div class="deal-footer">
+              <span class="deal-price">Rs. 1000</span>
+              <button class="btn-add-deal" onclick="addBundleToCart('Deal 2 (1 Med Classic + 2 Reg. Drinks)', 1000)">
+                Claim Deal
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deal 3 -->
+        <div class="deal-card">
+          <div class="deal-badge">Deal 03</div>
+          <div class="deal-content">
+            <h3 class="deal-title">2 Small Pizzas + Half Pasta + 1L Drink</h3>
+            <p class="deal-desc">Two personal pizzas, one half portion of creamy chicken pasta, and a 1 Liter soft drink.</p>
+            <div class="deal-footer">
+              <span class="deal-price">Rs. 1300</span>
+              <button class="btn-add-deal" onclick="addBundleToCart('Deal 3 (2 Small + Half Pasta + 1L)', 1300)">
+                Claim Deal
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deal 4 -->
+        <div class="deal-card">
+          <div class="deal-badge">Deal 04</div>
+          <div class="deal-content">
+            <h3 class="deal-title">1 Large Special Pizza + 1.5L Drink</h3>
+            <p class="deal-desc">A giant wood-fired special flavor pizza served with a large 1.5 Liter cold soft drink.</p>
+            <div class="deal-footer">
+              <span class="deal-price">Rs. 1470</span>
+              <button class="btn-add-deal" onclick="addBundleToCart('Deal 4 (1 Large Special + 1.5L)', 1470)">
+                Claim Deal
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deal 5 -->
+        <div class="deal-card">
+          <div class="deal-badge">Deal 05</div>
+          <div class="deal-content">
+            <h3 class="deal-title">1 Med Special + 1 Special Roll + 1L Drink</h3>
+            <p class="deal-desc">One medium special pizza, one signature special roll, and a 1 Liter cold soft drink.</p>
+            <div class="deal-footer">
+              <span class="deal-price">Rs. 1650</span>
+              <button class="btn-add-deal" onclick="addBundleToCart('Deal 5 (1 Med Special + 1 Roll + 1L)', 1650)">
+                Claim Deal
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deal 6 -->
+        <div class="deal-card">
+          <div class="deal-badge">Deal 06</div>
+          <div class="deal-content">
+            <h3 class="deal-title">2 Medium Classic Pizzas + 1.5L Drink</h3>
+            <p class="deal-desc">Double classical bliss. Two medium classic pizzas with a large 1.5L soft drink.</p>
+            <div class="deal-footer">
+              <span class="deal-price">Rs. 1930</span>
+              <button class="btn-add-deal" onclick="addBundleToCart('Deal 6 (2 Med Classic + 1.5L)', 1930)">
+                Claim Deal
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deal 7 -->
+        <div class="deal-card">
+          <div class="deal-badge">Deal 07</div>
+          <div class="deal-content">
+            <h3 class="deal-title">1 Lrg Special + Half Special Pasta + 1.5L</h3>
+            <p class="deal-desc">One large special pizza, half portion of AD special pasta, and a 1.5L soft drink.</p>
+            <div class="deal-footer">
+              <span class="deal-price">Rs. 1900</span>
+              <button class="btn-add-deal" onclick="addBundleToCart('Deal 7 (1 Lrg Special + Half Pasta + 1.5L)', 1900)">
+                Claim Deal
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deal 8 -->
+        <div class="deal-card">
+          <div class="deal-badge">Deal 08</div>
+          <div class="deal-content">
+            <h3 class="deal-title">1 XL Special Pizza + 1.5L Drink</h3>
+            <p class="deal-desc">Giant extra-large party size special pizza combined with a 1.5 Liter cold soft drink.</p>
+            <div class="deal-footer">
+              <span class="deal-price">Rs. 1880</span>
+              <button class="btn-add-deal" onclick="addBundleToCart('Deal 8 (1 XL Special + 1.5L)', 1880)">
+                Claim Deal
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deal 9 -->
+        <div class="deal-card">
+          <div class="deal-badge">Deal 09</div>
+          <div class="deal-content">
+            <h3 class="deal-title">1 Lrg Classic + 1 Med Classic + 1.5L</h3>
+            <p class="deal-desc">One large classic pizza plus one medium classic pizza, served with a 1.5L cold drink.</p>
+            <div class="deal-footer">
+              <span class="deal-price">Rs. 2200</span>
+              <button class="btn-add-deal" onclick="addBundleToCart('Deal 9 (1 Lrg Classic + 1 Med Classic + 1.5L)', 2200)">
+                Claim Deal
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Friends Fiesta -->
+        <div class="deal-card featured">
+          <div class="deal-badge">Friends Fiesta</div>
+          <div class="deal-content">
+            <h3 class="deal-title">2 Large Special Pizzas + 1.5L Drink</h3>
+            <p class="deal-desc">Feast with friends. Two large special flavor pizzas and a large 1.5 Liter soft drink.</p>
+            <div class="deal-footer">
+              <span class="deal-price">Rs. 2700</span>
+              <button class="btn-add-deal" onclick="addBundleToCart('Friends Fiesta (2 Lrg Special + 1.5L)', 2700)">
+                Claim Deal
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Family Deal 1 -->
+        <div class="deal-card">
+          <div class="deal-badge">Family Deal 01</div>
+          <div class="deal-content">
+            <h3 class="deal-title">1 XL Special + 1 Full Pasta + 1 Spin Roll + 1.5L</h3>
+            <p class="deal-desc">One XL pizza, a full portion of special pasta, a spin roll, and a 1.5L soft drink.</p>
+            <div class="deal-footer">
+              <span class="deal-price">Rs. 3150</span>
+              <button class="btn-add-deal" onclick="addBundleToCart('Family Deal 1 (XL + Pasta + Roll + 1.5L)', 3150)">
+                Claim Deal
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Family Deal 2 -->
+        <div class="deal-card">
+          <div class="deal-badge">Family Deal 02</div>
+          <div class="deal-content">
+            <h3 class="deal-title">2 XL Special + 2 Spin Rolls + 1 Full Pasta + 2x 1.5L</h3>
+            <p class="deal-desc">The ultimate feast. 2 XL special pizzas, 2 spin rolls, 1 full pasta, and two 1.5L drinks.</p>
+            <div class="deal-footer">
+              <span class="deal-price">Rs. 5450</span>
+              <button class="btn-add-deal" onclick="addBundleToCart('Family Deal 2 (2XL + 2Rolls + Pasta + 2x1.5L)', 5450)">
+                Claim Deal
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow-label">OUR COMPLETE MENU</span>
+        <h2 class="section-title">The Tandoor Menu</h2>
+        <div class="title-divider"></div>
+      </div>
+
+      <!-- Menu Category Tabs -->
+      <div class="menu-tabs">
+        <button class="tab-btn active" data-category="classic-pizza">Classic Flavors</button>
+        <button class="tab-btn" data-category="special-pizza">Special Flavors</button>
+        <button class="tab-btn" data-category="crust-pizza">Special Crusts</button>
+        <button class="tab-btn" data-category="premium-pizza">Premium Flavors</button>
+        <button class="tab-btn" data-category="pasta">Tandoori Pastas</button>
+        <button class="tab-btn" data-category="rolls">Rolls</button>
+        <button class="tab-btn" data-category="drinks">Drinks</button>
+        <button class="tab-btn" data-category="extras">Extras</button>
+      </div>
+
+      <!-- Two-Column Layout Wrapper -->
+      <div class="menu-layout-wrapper">
+        <!-- Left Side: Menu Grid -->
+        <div class="menu-main-content">
+          <div class="menu-grid" id="menu-grid">
+            
+            <!-- ================= CLASSIC FLAVORS ================= -->
+            <!-- Tikka Bar B.Q -->
+            <div class="menu-item-card" data-category="classic-pizza">
+              <div class="item-img-container">
+                <img src="tikka.png" alt="Chicken Tikka Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Chicken Tikka Bar B.Q</h3>
+                  <span class="item-price" id="price-tikka">Rs. 899</span>
+                </div>
+                <p class="item-desc">Traditional chicken tikka pieces, marinated sliced onions, mozzarella, over smoky pizza base.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn" onclick="selectSize(this, 'tikka', 'S', 429)">S (7")</button>
+                  <button class="size-btn active" onclick="selectSize(this, 'tikka', 'M', 899)">M (10")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'tikka', 'L', 1200)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'tikka', 'XL', 1550)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('Chicken Tikka Bar B.Q', 'tikka')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Fajita Sicilian -->
+            <div class="menu-item-card" data-category="classic-pizza">
+              <div class="item-img-container">
+                <img src="sicilian.png" alt="Fajita Sicilian Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Fajita Sicilian <i class="fa-solid fa-pepper-hot" style="color:var(--accent-orange); font-size:1rem;"></i></h3>
+                  <span class="item-price" id="price-sicilian">Rs. 899</span>
+                </div>
+                <p class="item-desc">Spicy Sicilian-style chicken chunks, green peppers, jalapeños, onions, and lots of mozzarella cheese.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn" onclick="selectSize(this, 'sicilian', 'S', 429)">S (7")</button>
+                  <button class="size-btn active" onclick="selectSize(this, 'sicilian', 'M', 899)">M (10")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'sicilian', 'L', 1200)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'sicilian', 'XL', 1550)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('Fajita Sicilian', 'sicilian')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Chicken Fajita -->
+            <div class="menu-item-card" data-category="classic-pizza">
+              <div class="item-img-container">
+                <img src="fajita.png" alt="Chicken Fajita Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Chicken Fajita</h3>
+                  <span class="item-price" id="price-fajita">Rs. 899</span>
+                </div>
+                <p class="item-desc">Classic fajita chicken slices, sweet bell peppers, rings of onions, and rich mozzarella cheese.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn" onclick="selectSize(this, 'fajita', 'S', 429)">S (7")</button>
+                  <button class="size-btn active" onclick="selectSize(this, 'fajita', 'M', 899)">M (10")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'fajita', 'L', 1200)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'fajita', 'XL', 1550)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('Chicken Fajita', 'fajita')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Vegetarians -->
+            <div class="menu-item-card" data-category="classic-pizza">
+              <div class="item-img-container">
+                <img src="vegetarians.png" alt="Vegetarian Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Vegetarians</h3>
+                  <span class="item-price" id="price-veg">Rs. 899</span>
+                </div>
+                <p class="item-desc">A fresh medley of sweet corn, black olives, bell peppers, sliced mushrooms, and onions.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn" onclick="selectSize(this, 'veg', 'S', 429)">S (7")</button>
+                  <button class="size-btn active" onclick="selectSize(this, 'veg', 'M', 899)">M (10")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'veg', 'L', 1200)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'veg', 'XL', 1550)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('Vegetarians Pizza', 'veg')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Chicken Supreme -->
+            <div class="menu-item-card" data-category="classic-pizza">
+              <div class="item-img-container">
+                <img src="supreme.png" alt="Chicken Supreme Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Chicken Supreme</h3>
+                  <span class="item-price" id="price-supreme">Rs. 899</span>
+                </div>
+                <p class="item-desc">Fully loaded with chicken tikka, chicken fajita, olives, bell peppers, onions (Without Sauce option available).</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn" onclick="selectSize(this, 'supreme', 'S', 429)">S (7")</button>
+                  <button class="size-btn active" onclick="selectSize(this, 'supreme', 'M', 899)">M (10")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'supreme', 'L', 1200)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'supreme', 'XL', 1550)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('Chicken Supreme', 'supreme')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cheese Lover -->
+            <div class="menu-item-card" data-category="classic-pizza">
+              <div class="item-img-container">
+                <img src="cheese.png" alt="Cheese Lover Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Cheese Lover</h3>
+                  <span class="item-price" id="price-cheese">Rs. 899</span>
+                </div>
+                <p class="item-desc">A rich, golden layer of 100% real mozzarella cheese on our signature wood-fired tomato sauce base.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn" onclick="selectSize(this, 'cheese', 'S', 429)">S (7")</button>
+                  <button class="size-btn active" onclick="selectSize(this, 'cheese', 'M', 899)">M (10")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'cheese', 'L', 1200)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'cheese', 'XL', 1550)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('Cheese Lover Pizza', 'cheese')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- ================= SPECIAL FLAVORS ================= -->
+            <!-- AD Special -->
+            <div class="menu-item-card" data-category="special-pizza">
+              <div class="item-img-container">
+                <img src="ad_special.png" alt="AD Special Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">AD Special</h3>
+                  <span class="item-price" id="price-adspec">Rs. 999</span>
+                </div>
+                <p class="item-desc">Our chef's signature recipe. Stuffed with double chicken toppings, unique secret tandoori sauce, and fresh herbs.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'adspec', 'M', 999)">M (10")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'adspec', 'L', 1300)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'adspec', 'XL', 1750)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('AD Special Pizza', 'adspec')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Behari Kebab -->
+            <div class="menu-item-card" data-category="special-pizza">
+              <div class="item-img-container">
+                <img src="behari.png" alt="Behari Kebab Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Behari Kebab Pizza</h3>
+                  <span class="item-price" id="price-behari">Rs. 999</span>
+                </div>
+                <p class="item-desc">Smoky wood-fired chicken behari kebabs, sliced green chilies, onions, coriander, over spicy behari base.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'behari', 'M', 999)">M (10")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'behari', 'L', 1300)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'behari', 'XL', 1750)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('Behari Kebab Pizza', 'behari')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Chicken Tandoori -->
+            <div class="menu-item-card" data-category="special-pizza">
+              <div class="item-img-container">
+                <img src="tandoori.png" alt="Chicken Tandoori Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Chicken Tandoori <i class="fa-solid fa-pepper-hot" style="color:var(--accent-orange); font-size:1rem;"></i></h3>
+                  <span class="item-price" id="price-tandoori">Rs. 999</span>
+                </div>
+                <p class="item-desc">Spicy wood-charred tandoori chicken shreds, local green chilis, bell peppers, rings of onions, and mozzarella.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'tandoori', 'M', 999)">M (10")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'tandoori', 'L', 1300)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'tandoori', 'XL', 1750)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('Chicken Tandoori Pizza', 'tandoori')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Malai Boti -->
+            <div class="menu-item-card" data-category="special-pizza">
+              <div class="item-img-container">
+                <img src="malai.png" alt="Malai Boti Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Malai Boti</h3>
+                  <span class="item-price" id="price-malai">Rs. 999</span>
+                </div>
+                <p class="item-desc">Creamy, melt-in-mouth chicken tandoori malai boti pieces, mild onions, mozzarella, cream toppings.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'malai', 'M', 999)">M (10")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'malai', 'L', 1300)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'malai', 'XL', 1750)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('Malai Boti Pizza', 'malai')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Chicken Extreme -->
+            <div class="menu-item-card" data-category="special-pizza">
+              <div class="item-img-container">
+                <img src="extreme.png" alt="Chicken Extreme Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Chicken Extreme</h3>
+                  <span class="item-price" id="price-extreme">Rs. 999</span>
+                </div>
+                <p class="item-desc">Double portion of chicken tikka + chicken fajita, spicy jalapeños, onions, bell peppers, and chili sauce flakes.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'extreme', 'M', 999)">M (10")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'extreme', 'L', 1300)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'extreme', 'XL', 1750)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('Chicken Extreme Pizza', 'extreme')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+
+            <!-- ================= SPECIAL CRUSTS ================= -->
+            <!-- Crown Crust -->
+            <div class="menu-item-card" data-category="crust-pizza">
+              <div class="item-img-container">
+                <img src="crown.png" alt="Crown Crust Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Crown Crust</h3>
+                  <span class="item-price" id="price-crown">Rs. 1100</span>
+                </div>
+                <p class="item-desc">A majestic crown-shaped outer crust rimmed with succulent kebab cups or cheese fillings, topped with chicken.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'crown', 'M', 1100)">M (10")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'crown', 'L', 1450)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'crown', 'XL', 1950)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('Crown Crust Pizza', 'crown')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Kebab Stuff -->
+            <div class="menu-item-card" data-category="crust-pizza">
+              <div class="item-img-container">
+                <img src="behari.png" alt="Kebab Stuff Crust Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Kebab Stuff Crust</h3>
+                  <span class="item-price" id="price-kstuff">Rs. 1100</span>
+                </div>
+                <p class="item-desc">Tasty chicken seekh kebab roll stuffed directly inside the outer crust perimeter for an edge-to-edge meat feast.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'kstuff', 'M', 1100)">M (10")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'kstuff', 'L', 1450)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'kstuff', 'XL', 1950)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('Kebab Stuff Crust Pizza', 'kstuff')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cheese Stuff -->
+            <div class="menu-item-card" data-category="crust-pizza">
+              <div class="item-img-container">
+                <img src="cheese.png" alt="Cheese Stuff Crust Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Cheese Stuff Crust</h3>
+                  <span class="item-price" id="price-cstuff">Rs. 1100</span>
+                </div>
+                <p class="item-desc">Melted, stringy cream cheese piped inside the entire outer rim. A heavenly bite down to the very last crumb.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'cstuff', 'M', 1100)">M (10")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'cstuff', 'L', 1450)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'cstuff', 'XL', 1950)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('Cheese Stuff Crust Pizza', 'cstuff')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+
+            <!-- ================= PREMIUM FLAVORS ================= -->
+            <!-- Chicken Cheese Stuffer -->
+            <div class="menu-item-card" data-category="premium-pizza">
+              <div class="item-img-container">
+                <img src="cheese.png" alt="Chicken Cheese Stuffer Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Chicken Cheese Stuffer</h3>
+                  <span class="item-price" id="price-stuffer">Rs. 1550</span>
+                </div>
+                <p class="item-desc">Premium layers of chicken breast and double mozzarella cheese inside a stuffed puff border crust.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'stuffer', 'L', 1550)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'stuffer', 'XL', 2050)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('Chicken Cheese Stuffer Pizza', 'stuffer')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Kebab Twister -->
+            <div class="menu-item-card" data-category="premium-pizza">
+              <div class="item-img-container">
+                <img src="crown.png" alt="Kebab Twister Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Kebab Twister</h3>
+                  <span class="item-price" id="price-twister">Rs. 1550</span>
+                </div>
+                <p class="item-desc">Twisted crust segments filled with mini-kebabs and topped with a creamy white sauce base and chicken.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'twister', 'L', 1550)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'twister', 'XL', 2050)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('Kebab Twister Pizza', 'twister')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Peri Peri -->
+            <div class="menu-item-card" data-category="premium-pizza">
+              <div class="item-img-container">
+                <img src="extreme.png" alt="Peri Peri Pizza" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Peri Peri Pizza</h3>
+                  <span class="item-price" id="price-periperi">Rs. 1550</span>
+                </div>
+                <p class="item-desc">Spicy marinated chicken chunks, sliced bell peppers, red onion flakes, topped with hot peri peri drizzle.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'periperi', 'L', 1550)">L (13")</button>
+                  <button class="size-btn" onclick="selectSize(this, 'periperi', 'XL', 2050)">XL (16")</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPizzaToCart('Peri Peri Pizza', 'periperi')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+
+            <!-- ================= PASTAS ================= -->
+            <!-- AD Special Pasta -->
+            <div class="menu-item-card" data-category="pasta">
+              <div class="item-img-container">
+                <img src="pasta.png" alt="AD Special Pasta" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">AD Special Pasta</h3>
+                  <span class="item-price" id="price-specpasta">Rs. 450</span>
+                </div>
+                <p class="item-desc">Signature oven-baked pasta with thick layers of shredded chicken, white creamy sauce, and melted cheese crown.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'specpasta', 'Half', 450)">Half</button>
+                  <button class="size-btn" onclick="selectSize(this, 'specpasta', 'Full', 850)">Full</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPastaToCart('AD Special Pasta', 'specpasta')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Flaming Pasta -->
+            <div class="menu-item-card" data-category="pasta">
+              <div class="item-img-container">
+                <img src="pasta.png" alt="Flaming Pasta" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Flaming Pasta <i class="fa-solid fa-pepper-hot" style="color:var(--accent-orange); font-size:1rem;"></i></h3>
+                  <span class="item-price" id="price-flamepasta">Rs. 350</span>
+                </div>
+                <p class="item-desc">Oven-baked hot pasta tossed in spicy red chili garlic sauce, tender chicken strips, and jalapeños.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'flamepasta', 'Half', 350)">Half</button>
+                  <button class="size-btn" onclick="selectSize(this, 'flamepasta', 'Full', 650)">Full</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPastaToCart('Flaming Pasta', 'flamepasta')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Crunchy Pasta -->
+            <div class="menu-item-card" data-category="pasta">
+              <div class="item-img-container">
+                <img src="pasta.png" alt="Crunchy Pasta" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Crunchy Chicken Pasta</h3>
+                  <span class="item-price" id="price-crunchypasta">Rs. 400</span>
+                </div>
+                <p class="item-desc">Creamy base pasta topped with deep-fried breaded crispy chicken chunks and melted cheese layer.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'crunchypasta', 'Half', 400)">Half</button>
+                  <button class="size-btn" onclick="selectSize(this, 'crunchypasta', 'Full', 750)">Full</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPastaToCart('Crunchy Chicken Pasta', 'crunchypasta')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Creamy Pasta -->
+            <div class="menu-item-card" data-category="pasta">
+              <div class="item-img-container">
+                <img src="pasta.png" alt="Creamy Pasta" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Creamy Chicken Pasta</h3>
+                  <span class="item-price" id="price-creamypasta">Rs. 350</span>
+                </div>
+                <p class="item-desc">Delicious penne pasta cooked in velvety smooth milk-cheese sauce with diced chicken, mushrooms, and herbs.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'creamypasta', 'Half', 350)">Half</button>
+                  <button class="size-btn" onclick="selectSize(this, 'creamypasta', 'Full', 650)">Full</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addPastaToCart('Creamy Chicken Pasta', 'creamypasta')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+
+            <!-- ================= ROLLS ================= -->
+            <!-- Spin Roll -->
+            <div class="menu-item-card" data-category="rolls">
+              <div class="item-img-container">
+                <img src="roll.png" alt="Chicken Spin Roll" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Chicken Spin Roll</h3>
+                  <span class="item-price">Rs. 470</span>
+                </div>
+                <p class="item-desc">Baked rolls stuffed with tender chicken bites, cheese, and spicy garlic butter spreads.</p>
+                <button class="btn-add-cart" onclick="addItemToCart('Chicken Spin Roll', 470)">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Behari Roll -->
+            <div class="menu-item-card" data-category="rolls">
+              <div class="item-img-container">
+                <img src="roll.png" alt="Behari Roll" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Behari Roll</h3>
+                  <span class="item-price">Rs. 530</span>
+                </div>
+                <p class="item-desc">Baked rolls stuffed with smoky behari chicken kebab shreds, mild spices, onions, and cheese.</p>
+                <button class="btn-add-cart" onclick="addItemToCart('Behari Roll', 530)">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- AD Special Roll -->
+            <div class="menu-item-card" data-category="rolls">
+              <div class="item-img-container">
+                <img src="roll.png" alt="AD Special Roll" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">AD Special Roll</h3>
+                  <span class="item-price">Rs. 570</span>
+                </div>
+                <p class="item-desc">Signature roll stuffed with special blended hot sauce, shredded chicken pieces, and mozzarella cheese.</p>
+                <button class="btn-add-cart" onclick="addItemToCart('AD Special Roll', 570)">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+
+            <!-- ================= DRINKS ================= -->
+            <!-- Soft Drinks -->
+            <div class="menu-item-card" data-category="drinks">
+              <div class="item-img-container">
+                <img src="drinks.png" alt="Soft Drinks selection" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Soft Drinks</h3>
+                  <span class="item-price" id="price-sdrink">Rs. 80</span>
+                </div>
+                <p class="item-desc">Chilled selection of popular soft drinks (Coke, Sprite, Fanta, Dew).</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'sdrink', 'Regular', 80)">Regular</button>
+                  <button class="size-btn" onclick="selectSize(this, 'sdrink', '1 Liter', 170)">1 Liter</button>
+                  <button class="size-btn" onclick="selectSize(this, 'sdrink', '1.5 Liter', 220)">1.5 Ltr</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addDrinksToCart('Soft Drink', 'sdrink')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Mineral Water -->
+            <div class="menu-item-card" data-category="drinks">
+              <div class="item-img-container">
+                <img src="drinks.png" alt="Mineral Water bottles" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Mineral Water</h3>
+                  <span class="item-price" id="price-water">Rs. 60</span>
+                </div>
+                <p class="item-desc">Clean, cold mineral drinking water for hydration.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'water', 'Small', 60)">Small</button>
+                  <button class="size-btn" onclick="selectSize(this, 'water', 'Large', 120)">Large</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addDrinksToCart('Mineral Water', 'water')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+
+            <!-- ================= EXTRAS ================= -->
+            <!-- Extra Toppings -->
+            <div class="menu-item-card" data-category="extras">
+              <div class="item-img-container">
+                <img src="extras.png" alt="Extra cheese toppings" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Extra Topping</h3>
+                  <span class="item-price" id="price-topping">Rs. 150</span>
+                </div>
+                <p class="item-desc">Add extra cheese or chicken portions to enhance your pizza layers.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'topping', 'Medium', 150)">Medium</button>
+                  <button class="size-btn" onclick="selectSize(this, 'topping', 'Large', 250)">Large</button>
+                  <button class="size-btn" onclick="selectSize(this, 'topping', 'XL', 350)">XL</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addExtrasToCart('Extra Topping', 'topping')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Extra Sauce -->
+            <div class="menu-item-card" data-category="extras">
+              <div class="item-img-container">
+                <img src="extras.png" alt="Extra dipping sauces" class="item-img">
+              </div>
+              <div class="item-body">
+                <div class="item-header">
+                  <h3 class="item-title">Extra Sauce</h3>
+                  <span class="item-price" id="price-sauce">Rs. 100</span>
+                </div>
+                <p class="item-desc">Add delicious extra side sauces to dip your wood-fired crusts.</p>
+                
+                <div class="size-selector">
+                  <button class="size-btn active" onclick="selectSize(this, 'sauce', 'Dip Sauce', 100)">Dip Sauce</button>
+                  <button class="size-btn" onclick="selectSize(this, 'sauce', 'Special Sauce', 130)">Special</button>
+                </div>
+                
+                <button class="btn-add-cart" onclick="addExtrasToCart('Extra Sauce', 'sauce')">
+                  Add to Order <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Right Side: Sticky Checkout Cart (Desktop only) -->
+        <div class="menu-sidebar">
+          <div class="sidebar-cart-panel">
+            <div class="sidebar-cart-header">
+              <h3><i class="fa-solid fa-fire-flame-curved"></i> Your Order List</h3>
+            </div>
+            
+            <div class="sidebar-cart-items" id="sidebar-cart-items">
+              <div class="empty-cart-message">
+                <i class="fa-solid fa-pizza-slice"></i>
+                <p>Your tandoor is cold.<br>Add some pizzas!</p>
+              </div>
+            </div>
+
+            <div class="sidebar-cart-footer">
+              <div class="cart-total-row">
+                <span>Total Price:</span>
+                <span class="cart-total-price" id="sidebar-cart-total">Rs. 0</span>
+              </div>
+              <button class="btn-checkout" onclick="sendWhatsAppOrder()">
+                <i class="fa-brands fa-whatsapp"></i> Send Order to WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- The Fire Experience Section -->
+  <section class="experience-section" id="experience">
+    <div class="container">
+      <div class="experience-grid">
+        <div class="experience-content">
+          <span class="eyebrow-label">OUR ART & PASSION</span>
+          <h2 class="section-title">The Art of Tandoor</h2>
+          <div class="title-divider left"></div>
+          <p class="experience-text">
+            Our tandoor runs at a blistering 480°C (900°F). Fuelled by natural hardwood, it infuses our pizzas with a distinct, unmatched smokiness and creates a perfectly blistered crust that is crisp on the outside yet airy and soft on the inside.
+          </p>
+          <div class="experience-highlights">
+            <div class="highlight-item">
+              <i class="fa-solid fa-fire"></i>
+              <h4>480°C Real Fire</h4>
+            </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-clock"></i>
+              <h4>90-Sec Flash Cook</h4>
+            </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-seedling"></i>
+              <h4>Slow Fermented Dough</h4>
+            </div>
+          </div>
+        </div>
+        <div class="experience-visual">
+          <div class="tandoor-stove">
+            <div class="tandoor-fire-effect"></div>
+            <div class="tandoor-pot">
+              <div class="tandoor-opening">
+                <div class="tandoor-interior-glow"></div>
+                <div class="tandoor-sparks"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shopping Cart Drawer (Fallback for Mobile viewports) -->
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-fire-flame-curved"></i> Your Order List</h3>
+      <button class="cart-close" id="cart-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    
+    <div class="cart-items" id="cart-items">
+      <div class="empty-cart-message">
+        <i class="fa-solid fa-pizza-slice"></i>
+        <p>Your tandoor is cold. Add some pizzas!</p>
+      </div>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total Price:</span>
+        <span class="cart-total-price" id="cart-total">Rs. 0</span>
+      </div>
+      <button class="btn-checkout" id="btn-checkout">
+        <i class="fa-brands fa-whatsapp"></i> Send Order to WhatsApp
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Added to your order!</div>
+
+  <!-- Footer Section -->
+  <footer class="footer-section" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <span class="logo-accent">AD</span>
+            <span class="logo-text">TANDOORI PIZZA</span>
+          </a>
+          <p class="footer-about">Crafting authentic wood-fired pizzas with a traditional tandoor twist. Bold flavours, hot fire, fresh dough daily.</p>
+          <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-hours">
+          <h4>Fired Up Hours</h4>
+          <ul>
+            <li><span>Mon - Sun</span> <span>2:00 PM - 2:00 AM</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Visit & Order</h4>
+          <p><i class="fa-solid fa-location-dot"></i> Main Tandoor Highway, AD District</p>
+          <p><i class="fa-solid fa-phone"></i> 0330-5566-111</p>
+          <p><i class="fa-brands fa-whatsapp"></i> Order Line: 0330-5566-111</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 AD Tandoori Pizza. All rights reserved. Designed for fire lovers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
