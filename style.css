@@ -1616,9 +1616,11 @@ a {
 }
 
 .cart-footer {
-  padding: 24px;
+  padding: 20px 24px;
+  padding-bottom: max(20px, env(safe-area-inset-bottom, 20px));
   border-top: 1px solid var(--border-secondary);
   background: var(--bg-primary);
+  flex-shrink: 0;
 }
 
 .cart-total-row {
@@ -1661,22 +1663,26 @@ a {
 /* Toast Notifications */
 .toast {
   position: fixed;
-  bottom: -60px;
+  bottom: -80px;
   left: 50%;
   transform: translateX(-50%);
   background: var(--accent-orange);
   color: var(--text-on-orange);
-  padding: 14px 28px;
+  padding: 12px 24px;
   border-radius: 30px;
   font-family: var(--font-heading);
   font-weight: 700;
+  font-size: 0.9rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   z-index: 3000;
   transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  white-space: nowrap;
+  max-width: 90vw;
+  text-align: center;
 }
 
 .toast.show {
-  bottom: 30px;
+  bottom: 100px;
 }
 
 /* Footer Section */
