@@ -1279,7 +1279,7 @@ a {
 /* Isolated Circular Food Image styling */
 .item-img-container {
   position: relative;
-  height: 140px;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1288,8 +1288,8 @@ a {
 }
 
 .item-img {
-  width: 125px;
-  height: 125px;
+  width: 145px;
+  height: 145px;
   border-radius: 50%;
   object-fit: cover;
   background-color: var(--bg-secondary-dark);
