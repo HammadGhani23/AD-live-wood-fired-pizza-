@@ -1034,30 +1034,51 @@ a {
   margin-bottom: 8px;
 }
 
-/* Deal Mini Items Row */
-.deal-images {
+/* Deal Overlapping Item Collage */
+.deal-collage {
   display: flex;
   align-items: center;
-  gap: 6px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  position: relative;
+  height: 65px;
+  padding-left: 15px;
 }
 
-.deal-mini-img {
-  width: 55px;
-  height: 55px;
+.deal-collage-img {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
   background-color: var(--bg-secondary-dark);
-  border: 1px solid var(--border-secondary);
-  padding: 2px;
-  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+  border: 2px solid var(--bg-secondary-card);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  margin-left: -18px; /* Creates the overlapping flyer effect */
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), margin-left 0.3s ease;
+  position: relative;
 }
 
-.plus-sign {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1rem;
-  color: var(--accent-orange);
+/* Stacking Order - left-most is on top, subsequent stack behind */
+.deal-collage-img:nth-child(1) { z-index: 5; margin-left: 0; }
+.deal-collage-img:nth-child(2) { z-index: 4; }
+.deal-collage-img:nth-child(3) { z-index: 3; }
+.deal-collage-img:nth-child(4) { z-index: 2; }
+.deal-collage-img:nth-child(5) { z-index: 1; }
+
+/* Interactive Hover Effect — spreads the collage items slightly on hover */
+.deal-card:hover .deal-collage-img {
+  transform: scale(1.05);
+}
+.deal-card:hover .deal-collage-img:nth-child(2) {
+  transform: translate(4px, -2px) scale(1.05);
+}
+.deal-card:hover .deal-collage-img:nth-child(3) {
+  transform: translate(8px, -4px) scale(1.05);
+}
+.deal-card:hover .deal-collage-img:nth-child(4) {
+  transform: translate(12px, -6px) scale(1.05);
+}
+.deal-card:hover .deal-collage-img:nth-child(5) {
+  transform: translate(16px, -8px) scale(1.05);
 }
 
 .deal-title {
