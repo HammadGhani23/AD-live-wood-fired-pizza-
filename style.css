@@ -480,6 +480,325 @@ a {
   animation: pulseGlow 4s infinite ease-in-out;
 }
 
+/* ── Hero Pizza Showcase ── */
+.hero-pizza-showcase {
+  position: relative;
+  width: 420px;
+  max-width: 100%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-pizza-img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1;
+  box-shadow: 0 0 60px rgba(255, 122, 26, 0.35), 0 0 120px rgba(255, 122, 26, 0.1);
+  border: 3px solid rgba(255, 122, 26, 0.25);
+  animation: floatingBoard 6s infinite ease-in-out;
+}
+
+.hero-stat-chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(18, 15, 10, 0.88);
+  border: 1px solid rgba(255, 122, 26, 0.35);
+  backdrop-filter: blur(12px);
+  border-radius: 50px;
+  padding: 8px 16px;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-light);
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.hero-stat-chip i {
+  color: var(--accent-orange);
+  font-size: 0.85rem;
+}
+
+.chip-top-left  { top: 12%;  left: -10%; }
+.chip-bottom-right { bottom: 12%; right: -8%; }
+.chip-bottom-left  { bottom: 4%;  left: 2%; }
+
+/* ── Price Spotlight Banner ── */
+.best-value-banner {
+  background: linear-gradient(135deg, #130900 0%, #220e00 50%, #130900 100%);
+  border-top: 1px solid rgba(255, 122, 26, 0.18);
+  border-bottom: 1px solid rgba(255, 122, 26, 0.18);
+  position: relative;
+  overflow: hidden;
+  padding: 20px 40px 60px;
+}
+
+.best-value-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 80% at 50% 60%, rgba(255, 122, 26, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Top label strip */
+.bvb-header-label {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.bvb-header-label span {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--text-muted-dark);
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 122, 26, 0.2);
+  border-radius: 50px;
+  padding: 8px 22px;
+  background: rgba(255, 122, 26, 0.04);
+}
+
+.bvb-header-label span i {
+  color: var(--accent-orange);
+}
+
+/* Cards row */
+.bvb-cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: stretch;
+  position: relative;
+  z-index: 1;
+}
+
+/* Base card */
+.bvb-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 18px;
+  padding: 36px 28px;
+  gap: 14px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Side cards */
+.bvb-card-side {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 122, 26, 0.15);
+}
+
+.bvb-card-side:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 122, 26, 0.35);
+}
+
+/* Featured center card */
+.bvb-card-featured {
+  background: rgba(255, 122, 26, 0.06);
+  border: 2px solid var(--accent-orange);
+  box-shadow: 0 0 50px rgba(255, 122, 26, 0.18), 0 20px 50px rgba(0, 0, 0, 0.5);
+  transform: translateY(-10px);
+}
+
+.bvb-card-featured:hover {
+  transform: translateY(-16px);
+  box-shadow: 0 0 70px rgba(255, 122, 26, 0.28), 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Featured badge */
+.bvb-featured-badge {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-orange);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  padding: 5px 18px;
+  border-radius: 50px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 16px rgba(255, 122, 26, 0.4);
+}
+
+/* Card icon */
+.bvb-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 122, 26, 0.1);
+  border: 1px solid rgba(255, 122, 26, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--accent-orange);
+}
+
+.bvb-card-icon--large {
+  width: 64px;
+  height: 64px;
+  font-size: 1.6rem;
+  background: rgba(255, 122, 26, 0.15);
+  border-color: rgba(255, 122, 26, 0.35);
+}
+
+/* Eyebrow label */
+.bvb-card-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--text-muted-dark);
+  text-transform: uppercase;
+}
+
+/* Card name */
+.bvb-card-name {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-light);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+.bvb-card-name--large {
+  font-size: 1.9rem;
+}
+
+/* Card price */
+.bvb-card-price {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-orange);
+  text-shadow: 0 0 18px rgba(255, 122, 26, 0.3);
+  line-height: 1;
+}
+
+.bvb-card-price--large {
+  font-size: 2.6rem;
+  text-shadow: 0 0 28px rgba(255, 122, 26, 0.45);
+  animation: signFlicker 3s infinite alternate ease-in-out;
+}
+
+/* Card description */
+.bvb-card-desc {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--text-muted-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Perks list (for featured card) */
+.bvb-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 100%;
+  text-align: left;
+}
+
+.bvb-perk {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.bvb-perk i {
+  color: var(--accent-orange);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* CTA buttons */
+.bvb-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 12px 26px;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: var(--transition-smooth);
+  margin-top: 4px;
+}
+
+.bvb-card-cta--orange {
+  background: rgba(255, 122, 26, 0.1);
+  border: 1px solid rgba(255, 122, 26, 0.35);
+  color: var(--accent-orange);
+}
+
+.bvb-card-cta--orange:hover {
+  background: var(--accent-orange);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 122, 26, 0.35);
+}
+
+.bvb-card-cta--whatsapp {
+  background: linear-gradient(135deg, #25d366, #1da851);
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.3);
+}
+
+.bvb-card-cta--whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.45);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .best-value-banner { padding: 20px 20px 50px; }
+  .bvb-cards-row {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+  .bvb-card-featured {
+    transform: none;
+    order: -1;
+  }
+  .bvb-card-featured:hover { transform: translateY(-6px); }
+}
+
+
+
 /* Interactive Brand Board in Hero */
 .hero-brand-board {
   position: relative;

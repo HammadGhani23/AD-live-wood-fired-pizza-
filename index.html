@@ -100,49 +100,75 @@
 
       <div class="hero-visual">
         <div class="fire-glow-ring"></div>
-        
-        <!-- Interactive Brand & Delivery Board -->
-        <div class="hero-brand-board">
-          <div class="board-header">
-            <span class="board-badge"><i class="fa-solid fa-circle-check"></i> DINE IN & TAKE AWAY</span>
-            <span class="board-badge open-status"><i class="fa-solid fa-fire"></i> NOW OPEN</span>
+        <!-- Clean Hero Pizza Showcase -->
+        <div class="hero-pizza-showcase">
+          <img src="pizza.png" alt="AD Tandoori Pizza" class="hero-pizza-img" />
+          <div class="hero-stat-chip chip-top-left">
+            <i class="fa-solid fa-fire"></i>
+            <span>Wood-Fired at 480°C</span>
           </div>
-          <div class="board-body">
-            <div class="board-logo">AD TANDOORI PIZZA</div>
-            <div class="board-divider"></div>
-            
-            <div class="board-info-grid">
-              <div class="info-item">
-                <span class="info-label">PIZZA STARTING FROM</span>
-                <span class="info-value">Rs. 429/-</span>
-              </div>
-              <div class="info-item">
-                <span class="info-label">PASTA STARTING FROM</span>
-                <span class="info-value">Rs. 349/-</span>
-              </div>
-            </div>
-            
-            <div class="board-promo-tag">
-              <span class="promo-label">CROWN CRUST M-10"</span>
-              <span class="promo-value">Rs. 1100/-</span>
-            </div>
-            
-            <div class="board-divider"></div>
-            
-            <div class="board-delivery">
-              <div class="delivery-title">FOR DELIVERY & ORDERS</div>
-              <a href="tel:03305566111" class="delivery-number">
-                <i class="fa-solid fa-phone-volume"></i> 0330-5566-111
-              </a>
-              <div class="delivery-time">
-                <i class="fa-regular fa-clock"></i> We are open: 2:00 PM to 2:00 AM
-              </div>
-            </div>
+          <div class="hero-stat-chip chip-bottom-right">
+            <i class="fa-solid fa-clock"></i>
+            <span>Open till 3:00 AM</span>
+          </div>
+          <div class="hero-stat-chip chip-bottom-left">
+            <i class="fa-solid fa-phone"></i>
+            <span>0330 5566111</span>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Price Spotlight Banner -->
+  <div class="best-value-banner">
+    <div class="bvb-header-label">
+      <span><i class="fa-solid fa-fire"></i> WHAT WE OFFER — STARTING PRICES &amp; BEST PICKS</span>
+    </div>
+    <div class="bvb-cards-row">
+
+      <!-- Pizza Starting From -->
+      <div class="bvb-card bvb-card-side">
+        <div class="bvb-card-icon"><i class="fa-solid fa-pizza-slice"></i></div>
+        <div class="bvb-card-eyebrow">STARTING FROM</div>
+        <div class="bvb-card-name">Tandoori Pizza</div>
+        <div class="bvb-card-price">Rs. 429/-</div>
+        <p class="bvb-card-desc">Hand-stretched dough, fresh toppings, baked in a live wood-fired tandoor.</p>
+        <a href="#menu" onclick="event.preventDefault(); document.getElementById('menu').scrollIntoView({behavior:'smooth'}); setTimeout(()=>{ document.querySelector('.tab-btn[data-category=\'classic-pizza\']').click(); }, 400);" class="bvb-card-cta bvb-card-cta--orange">
+          <i class="fa-solid fa-arrow-right"></i> View Pizza Menu
+        </a>
+      </div>
+
+      <!-- Crown Crust — Featured Center -->
+      <div class="bvb-card bvb-card-featured">
+        <div class="bvb-featured-badge"><i class="fa-solid fa-crown"></i> BEST VALUE PICK</div>
+        <div class="bvb-card-icon bvb-card-icon--large"><i class="fa-solid fa-star"></i></div>
+        <div class="bvb-card-name bvb-card-name--large">Crown Crust M-10"</div>
+        <div class="bvb-card-price bvb-card-price--large">Rs. 1100/-</div>
+        <div class="bvb-perks">
+          <div class="bvb-perk"><i class="fa-solid fa-check-circle"></i> Dine In &amp; Take Away</div>
+          <div class="bvb-perk"><i class="fa-solid fa-check-circle"></i> Fresh Hand-Stretched Dough</div>
+          <div class="bvb-perk"><i class="fa-solid fa-check-circle"></i> Real Wood-Fired Flavour</div>
+        </div>
+        <a href="https://wa.me/923305566111?text=Hi!%20I%20would%20like%20to%20order%20a%20Crown%20Crust%20M-10%20Pizza!" target="_blank" class="bvb-card-cta bvb-card-cta--whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Order This Now
+        </a>
+      </div>
+
+      <!-- Pasta Starting From -->
+      <div class="bvb-card bvb-card-side">
+        <div class="bvb-card-icon"><i class="fa-solid fa-bowl-food"></i></div>
+        <div class="bvb-card-eyebrow">STARTING FROM</div>
+        <div class="bvb-card-name">Creamy Pasta</div>
+        <div class="bvb-card-price">Rs. 349/-</div>
+        <p class="bvb-card-desc">Rich, saucy chicken pasta made fresh to order — the perfect tandoor-side companion.</p>
+        <a href="#menu" onclick="event.preventDefault(); document.getElementById('menu').scrollIntoView({behavior:'smooth'}); setTimeout(()=>{ document.querySelector('.tab-btn[data-category=\'pasta\']').click(); }, 400);" class="bvb-card-cta bvb-card-cta--orange">
+          <i class="fa-solid fa-arrow-right"></i> View Pasta Menu
+        </a>
+      </div>
+
+    </div>
+  </div>
 
   <!-- Hot Deals Section -->
   <section class="deals-section" id="deals">
@@ -1148,15 +1174,15 @@
         <div class="footer-hours">
           <h4>Fired Up Hours</h4>
           <ul>
-            <li><span>Mon - Sun</span> <span>2:00 PM - 2:00 AM</span></li>
+            <li><span>Mon – Sun</span> <span>2:00 PM – 3:00 AM</span></li>
           </ul>
         </div>
 
         <div class="footer-contact">
           <h4>Visit & Order</h4>
-          <p><i class="fa-solid fa-location-dot"></i> Main Tandoor Highway, AD District</p>
-          <p><i class="fa-solid fa-phone"></i> 0330-5566-111</p>
-          <p><i class="fa-brands fa-whatsapp"></i> Order Line: 0330-5566-111</p>
+          <p><i class="fa-solid fa-location-dot"></i> Ground Floor Shop # 1 SA Mall, New Katarian Market, Saidpur Rd, near Meezan Bank, New Katarian Pindora, Rawalpindi</p>
+          <p><i class="fa-solid fa-phone"></i> 0330 5566111</p>
+          <p><i class="fa-brands fa-whatsapp"></i> Order Line: 0330 5566111</p>
         </div>
       </div>
       
