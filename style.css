@@ -34,6 +34,13 @@ body {
   overflow-x: hidden;
 }
 
+/* Scroll lock when cart/drawer is open — fixes iOS Safari scroll-through */
+body.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

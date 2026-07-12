@@ -243,12 +243,30 @@ function initShoppingCart() {
   const cartClose = document.getElementById('cart-close');
   const checkoutBtn = document.getElementById('btn-checkout');
 
-  cartTrigger.addEventListener('click', () => cartDrawer.classList.toggle('open'));
-  cartClose.addEventListener('click', () => cartDrawer.classList.remove('open'));
+  // Helpers to lock/unlock background scroll (fixes iOS Safari scroll-through)
+  let scrollY = 0;
+  const lockScroll = () => {
+    scrollY = window.scrollY;
+    document.body.style.top = `-${scrollY}px`;
+    document.body.classList.add('no-scroll');
+  };
+  const unlockScroll = () => {
+    document.body.classList.remove('no-scroll');
+    document.body.style.top = '';
+    window.scrollTo(0, scrollY);
+  };
+
+  const openCart = () => { cartDrawer.classList.add('open'); lockScroll(); };
+  const closeCart = () => { cartDrawer.classList.remove('open'); unlockScroll(); };
+
+  cartTrigger.addEventListener('click', () => {
+    if (cartDrawer.classList.contains('open')) { closeCart(); } else { openCart(); }
+  });
+  cartClose.addEventListener('click', closeCart);
 
   document.addEventListener('click', (e) => {
     if (!cartDrawer.contains(e.target) && !cartTrigger.contains(e.target) && cartDrawer.classList.contains('open')) {
-      cartDrawer.classList.remove('open');
+      closeCart();
     }
   });
 
