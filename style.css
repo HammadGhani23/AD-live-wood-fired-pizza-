@@ -1878,24 +1878,46 @@ a {
    RESPONSIVE — MOBILE  (≤ 768px)
 ═══════════════════════════════════════ */
 @media (max-width: 768px) {
-  /* Nav */
+  /* ── Navbar ── */
   .nav-links { display: none; }
   .mobile-nav-toggle { display: block; }
 
-  /* Hero */
-  .hero-headline { font-size: 2.6rem; }
+  /* Tighten nav container */
+  .nav-container { padding: 0 12px; }
+  .nav-actions { gap: 10px; }
 
-  .hero-subtext { font-size: 1rem; }
+  /* Shrink logo */
+  .logo-accent { font-size: 1.05rem; }
+  .logo-text { font-size: 0.78rem; letter-spacing: 0.02em; }
 
-  .hero-pizza-showcase { width: 260px; }
-  .hero-pizza-img { max-width: 240px; }
-
-  /* Make chips smaller */
-  .hero-stat-chip {
-    font-size: 0.7rem;
-    padding: 6px 12px;
-    gap: 6px;
+  /* Shrink Order Now pill */
+  .btn-pill-orange {
+    font-size: 0.72rem;
+    padding: 7px 14px;
+    border-radius: 20px;
   }
+
+  /* Shrink cart icon */
+  .cart-trigger {
+    width: 36px;
+    height: 36px;
+    font-size: 1.05rem;
+  }
+
+  /* ── Hero ── */
+  .hero-headline { font-size: 2.2rem; }
+  .hero-subtext { font-size: 0.95rem; }
+
+  /* Constrain pizza image to screen */
+  .hero-visual { min-height: auto; }
+  .hero-pizza-showcase {
+    width: clamp(160px, 55vw, 240px);
+    margin: 0 auto;
+  }
+  .hero-pizza-img { width: 100%; max-width: 100%; }
+
+  /* Hide floating chips — prevent overflow */
+  .hero-stat-chip { display: none; }
 
   /* Section headings */
   .section-title { font-size: 2rem; }
